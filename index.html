@@ -4,6 +4,32 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>gusg21 - Home</title>
 <style type="text/css">
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
 body {
 	font-family: Impact, sans-serif, serif;
 	text-align: center;
@@ -211,7 +237,7 @@ a:focus {
 <p class="main_text">&nbsp;</p>
 <p class="main_text">&nbsp;</p>
 <p class="main_text">&nbsp;</p>
-<p class="main_text">Why are you scrolling? Get a life.</p>
+<p class="main_text">Why are you scrolling? <div class="tooltip"><i>Get a life</i><span class="tooltiptext">~To quote Cara McMahon</span></div>.</p>
 <p class="main_text">&nbsp;</p>
 <p class="main_text">&nbsp;</p>
 <p class="main_text">&nbsp;</p>
