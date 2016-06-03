@@ -6,7 +6,11 @@
 <script src="js/konami.js"></script>
 <script>
 var easter_egg = new Konami();
-easter_egg.code = function() { alert('Konami code!'); }
+easter_egg.code = function() { 
+	alert('Konami code!'); 
+	document.getElementById("title").innerHTML = "ALL YOUR BASE ARE BELONG TO US";
+	document.body.style.backgroundColor = "red";
+}
 easter_egg.load();
 </script>
 <title>gusg21 - Home</title>
@@ -179,7 +183,7 @@ ul {
 </head>
 
 <body>
-<h1 class="large">Hello<img src="images/dog.jpg" alt="Dog" width="100px" height="100px"></h1>
+<h1 class="large" id="title">Hello<img src="images/dog.jpg" alt="Dog" width="100px" height="100px"></h1>
 <p class="arrow_down">↓</p>
 <p class="arrow_down">&nbsp;</p>
 <p class="arrow_down">&nbsp;</p>
