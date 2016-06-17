@@ -10,6 +10,9 @@ easter_egg.code = function() {
 	alert('Konami code!'); 
 	document.getElementById("title").innerHTML = "ALL YOUR BASE ARE BELONG TO US";
 	document.body.style.backgroundColor = "red";
+	var elem = document.getElementById('remove');
+    	elem.parentNode.removeChild(elem);
+    	return false;
 }
 easter_egg.load();
 </script>
@@ -184,6 +187,7 @@ ul {
 
 <body>
 <h1 class="large" id="title">Hello<img src="images/dog.jpg" alt="Dog" width="100px" height="100px"></h1>
+<div id="remove">
 <p class="arrow_down">↓</p>
 <p class="arrow_down">&nbsp;</p>
 <p class="arrow_down">&nbsp;</p>
@@ -684,5 +688,6 @@ ul {
 <p class="main_text">&nbsp;</p>
 <p class="main_text">Fine. <a onClick="troll()">Link</a><br />
 </p>
+</div>
 </body>
 </html>
