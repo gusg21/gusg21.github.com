@@ -12,6 +12,7 @@ easter_egg.code = function() {
 	document.body.style.backgroundColor = "red";
 	var elem = document.getElementById('remove');
     	elem.parentNode.removeChild(elem);
+    	elem.innerHTML += '<a href="rpg">Oh, hello.</a>'
     	return false;
 }
 easter_egg.load();
