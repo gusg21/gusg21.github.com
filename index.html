@@ -8,7 +8,7 @@
       <meta name="author" content="">
       <title>gusg21</title>
       <!-- Bootstrap Core CSS -->
-      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap">
       <link rel="icon" type="image/png" href="http://github.com/gusg21.png" />
       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,7 +26,7 @@
                <h1>gusg21</h1>
                <h2>Welcome to my site</h2>
                <br />
-               <h6>Let's just get this over with, shall we?</h6>
+               <h6 id="quote"><i>Loading pointless qoute...</i></h6>
             </div>
          </div>
          <div class="col-md-6">
@@ -111,6 +111,38 @@
               </div>
            </div>
          </div>
+         <div class="col-md-6">
+           <div class="panel panel-default">
+              <div class="panel-heading">
+                 <h2>Appreciation</h2>
+              </div>
+              <div class="panel-body">
+                 If you want to tell me you like one of my projects (yay) you can star them! (Please do!)
+              </div>
+           </div>
+         </div>
+         <div class="col-md-6">
+           <div class="panel panel-default">
+              <div class="panel-heading">
+                 <h2>Current Project</h2>
+              </div>
+              <div class="panel-body">
+                 I'm currently investing most of my time in <a href="http://darssites.github.io/">dars</a>. Please try it.
+              </div>
+           </div>
+         </div>
+         <div class="col-md-6">
+           <div class="panel panel-default">
+              <div class="panel-heading">
+                 <h2>Change the theme</h2>
+              </div>
+              <div class="panel-body">
+                 You don't like the way my website looks? :(
+                 <br /><br />
+                 <button class="btn btn-primary" onclick="randomTheme()">Change Theme</button>
+              </div>
+           </div>
+         </div>
          <div class="col-md-12" style="text-align:center;">
            <br /><br />
            <small>
@@ -126,5 +158,24 @@
       <script src="js/jquery.js"></script>
       <!-- Bootstrap Core JavaScript -->
       <script src="js/bootstrap.min.js"></script>
+      <script src="js/quote.js"></script>
+      <script>
+        function randomTheme() {
+          var bootstrapStyle = document.getElementById("bootstrap");
+          var styles = [ // All the possible quotes
+            "cerulean",
+            "cosmo",
+            "cyborg",
+            "darkly",
+            "flatly",
+            "journal",
+            "lumen",
+            "paper",
+            "united"
+          ];
+          var random = styles[Math.floor(Math.random()*styles.length)]; // Pick a random style
+          bootstrapStyle.setAttribute('href', "css/bootstrap-" + random + ".min.css");
+        }
+      </script>
    </body>
 </html>
