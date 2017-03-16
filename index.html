@@ -9,6 +9,7 @@
       <title>gusg21</title>
       <!-- Bootstrap Core CSS -->
       <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap">
+      <link href="css/style.css" rel="stylesheet" />
       <link rel="icon" type="image/png" href="http://github.com/gusg21.png" />
       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,7 +21,7 @@
    <body>
       <!-- Page Content -->
       <div class="container-fluid">
-         <div class="col-md-12">
+         <div class="col-md-12 title">
             <br />
             <div class="jumbotron well fixed">
                <h1>gusg21</h1>
@@ -139,14 +140,14 @@
               <div class="panel-body">
                  You don't like the way my website looks? :(
                  <br /><br />
-                 <button class="btn btn-primary" onclick="randomTheme()">Change Theme</button>
+                 <button class="btn btn-primary" onclick="randomTheme()" id="theme-change">Change Theme</button>
               </div>
            </div>
          </div>
          <div class="col-md-12" style="text-align:center;">
            <br /><br />
            <small>
-             Wrriten by gusg21, 2017 using the magic of Bootstrap.
+             Wrriten by gusg21, 2017 using the magic of Bootstrap. (And jQuery, but mostly Bootstrap)
              <br />
              <i>No small children were harmed in the making of this site.</i>
            </small>
@@ -161,8 +162,9 @@
       <script src="js/quote.js"></script>
       <script>
         function randomTheme() {
+          document.getElementById("theme-change").innerHTML = "Picking Theme...";
           var bootstrapStyle = document.getElementById("bootstrap");
-          var styles = [ // All the possible quotes
+          var styles = [
             "cerulean",
             "cosmo",
             "cyborg",
@@ -175,6 +177,7 @@
           ];
           var random = styles[Math.floor(Math.random()*styles.length)]; // Pick a random style
           bootstrapStyle.setAttribute('href', "css/bootstrap-" + random + ".min.css");
+          document.getElementById("theme-change").innerHTML = "Change Theme";
         }
       </script>
    </body>
