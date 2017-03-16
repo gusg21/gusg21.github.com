@@ -20,7 +20,7 @@ function load() {
     "I’m sorry, Dave. I’m afraid I can’t do that.",
     "Inconceivable!",
     "Corpse.<br>Rum.<br>Corner.<br>You'll recognize that if you know it. 2/7,000,000,000 chance that you do! :)",
-    "Son, if you want something in this life, you've got to work for it! Now quiet, they're about to announce the Lottery Numbers! <i>- Homer Simpson</i>"
+    "Son, if you want something in this life, you've got to work for it! Now quiet, they're about to announce the Lottery Numbers! <i>- Homer Simpson</i>",
     "Hardware is the part of the computer you can't kick."
   ];
   var item = items[Math.floor(Math.random()*items.length)]; // Pick a random quote
