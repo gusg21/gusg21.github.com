@@ -1,0 +1,25 @@
+/*
+ * Mixins
+ */
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+body {
+  background-attachment: fixed;
+  // background-size: cover;
+  background-image: url("../background.png");
+}
+
+.panel, .jumbotron {
+  @include box-shadow(5px, 5px, 10px, rgb(127, 127, 127));
+}

@@ -32,8 +32,13 @@
          </div>
          <div class="col-md-6">
             <br />
-            <div class="panel panel-default">
+            <div class="panel panel-default fade in" id="id-1">
                <div class="panel-heading">
+                 <button type="button" class="close"
+                 data-target="#id-1"
+                 data-dismiss="alert">
+                 <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                 </button>
                   <h2>
                      I code
                   </h2>
@@ -66,8 +71,13 @@
          </div>
          <div class="col-md-6">
             <br />
-            <div class="panel panel-default">
+            <div class="panel panel-default fade in" id="id-2">
                <div class="panel-heading">
+                 <button type="button" class="close"
+                 data-target="#id-2"
+                 data-dismiss="alert">
+                 <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                 </button>
                   <h2>I <a href="http://github.com/gusg21">GitHub</a></h2>
                </div>
                <div class="panel-body">
@@ -77,8 +87,13 @@
          </div>
          <div class="col-md-6">
             <br />
-            <div class="panel panel-default">
+            <div class="panel panel-default fade in" id="id-3">
                <div class="panel-heading">
+                 <button type="button" class="close"
+                 data-target="#id-3"
+                 data-dismiss="alert">
+                 <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                 </button>
                   <h2>Programming Languages I like</h2>
                </div>
                <div class="panel-body">
@@ -103,8 +118,13 @@
             </div>
          </div>
          <div class="col-md-6">
-           <div class="panel panel-default">
+           <div class="panel panel-default fade in" id="id-4">
               <div class="panel-heading">
+                <button type="button" class="close"
+                data-target="#id-4"
+                data-dismiss="alert">
+                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
                  <h2>Anger Management</h2>
               </div>
               <div class="panel-body">
@@ -113,8 +133,13 @@
            </div>
          </div>
          <div class="col-md-6">
-           <div class="panel panel-default">
+           <div class="panel panel-default fade in" id="id-5">
               <div class="panel-heading">
+                <button type="button" class="close"
+                data-target="#id-5"
+                data-dismiss="alert">
+                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
                  <h2>Appreciation</h2>
               </div>
               <div class="panel-body">
@@ -123,8 +148,13 @@
            </div>
          </div>
          <div class="col-md-6">
-           <div class="panel panel-default">
+           <div class="panel panel-default fade in" id="id-6">
               <div class="panel-heading">
+                <button type="button" class="close"
+                data-target="#id-6"
+                data-dismiss="alert">
+                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
                  <h2>Current Project</h2>
               </div>
               <div class="panel-body">
@@ -133,30 +163,39 @@
            </div>
          </div>
          <div class="col-md-6">
-           <div class="panel panel-default">
+           <div class="panel panel-default fade in" id="id-7">
               <div class="panel-heading">
+                <button type="button" class="close"
+                data-target="#id-7"
+                data-dismiss="alert">
+                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
                  <h2>Change the theme</h2>
               </div>
               <div class="panel-body">
-                 You don't like the way my website looks? :(
+                 You don't like the way my website looks? <span id="smiley">:(</span>
                  <br /><br />
                  <button class="btn btn-primary" onclick="randomTheme()" id="theme-change">Change Theme</button>
               </div>
            </div>
          </div>
-         <div class="col-md-12" style="text-align:center;">
-           <br /><br />
-           <small>
-             Wrriten by gusg21, 2017 using the magic of Bootstrap. (And jQuery, but mostly Bootstrap)
-             <br />
-             <i>No small children were harmed in the making of this site.</i>
-           </small>
-           <br /><br />
+         <div class="col-md-4 col-md-offset-4 footnote" style="text-align:center;">
+           <div class="panel panel-default">
+             <div class="panel-body">
+               <small>
+                 Wrriten by gusg21, 2017 using the magic of Bootstrap. (And jQuery, but mostly Bootstrap)
+                 <br />
+                 <i>No small children were harmed in the making of this site.</i>
+               </small>
+             </div>
+           </div>
          </div>
       </div>
       <!-- /.container-fluid -->
       <!-- jQuery Version 1.11.1 -->
       <script src="js/jquery.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
       <!-- Bootstrap Core JavaScript -->
       <script src="js/bootstrap.min.js"></script>
       <script src="js/quote.js"></script>
@@ -178,7 +217,37 @@
           var random = styles[Math.floor(Math.random()*styles.length)]; // Pick a random style
           bootstrapStyle.setAttribute('href', "css/bootstrap-" + random + ".min.css");
           document.getElementById("theme-change").innerHTML = "Change Theme";
+          if (random === "united") {
+            document.getElementById("smiley").innerHTML = ":D";
+          } else {
+            document.getElementById("smiley").innerHTML = ":(";
+          }
         }
+
+        // Smooth scrollin'
+
+        $(function(){
+
+          var $window = $(window);
+          var scrollTime = .6;
+          var scrollDistance = 170;
+
+          $window.on("mousewheel DOMMouseScroll", function(event){
+
+            event.preventDefault();
+
+            var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
+            var scrollTop = $window.scrollTop();
+            var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+
+            TweenMax.to($window, scrollTime, {
+              scrollTo : { y: finalScroll, autoKill:true },
+                ease: Power1.easeOut,
+                overwrite: 5
+              });
+
+          });
+        });
       </script>
    </body>
 </html>
