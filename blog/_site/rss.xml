@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+        <title>gusg21</title>
+        <description>gusg21 - Gus G</description>
+        <link>http://gusg21.github.io</link>
+        <atom:link href="http://gusg21.github.io/rss.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Sun, 19 Mar 2017 16:17:10 -0400</lastBuildDate>
+        <pubDate>Sun, 19 Mar 2017 16:17:10 -0400</pubDate>
+        <ttl>60</ttl>
+
+
+        <item>
+                <title>Number Parser</title>
+                <description>
+&lt;p&gt;I was thinking. I’ve heard of and have used lightly date parsers. For those who do not know, they change dates of many formats in strings into objects. They’re fun to push to the boundaries. But is there such a thing as a number parser? So I could convert this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;    &quot;four hundred and twenty two&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Into this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;    422
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That could be useful. Hmmm… Normal people would look into this and probably find it’s been done, but not me. I’m gonna go write one. And it’s gonna crash. Crash and burn.&lt;/p&gt;
+</description>
+                <link>http://gusg21.github.io/post/2017/03/19/number-parser</link>
+                <guid>http://gusg21.github.io/post/2017/03/19/number-parser</guid>
+                <pubDate>Sun, 19 Mar 2017 00:00:00 -0400</pubDate>
+        </item>
+
+        <item>
+                <title>Welcome to my Blog</title>
+                <description>
+&lt;p&gt;I will probably (maybe) (probably not) use this to write down stuff I learn over the course of coding that I don’t want to forget but know I probably will. I hope you … like it? I guess? I honestly don’t care.&lt;/p&gt;
+</description>
+                <link>http://gusg21.github.io/2017/03/19/hello-world</link>
+                <guid>http://gusg21.github.io/2017/03/19/hello-world</guid>
+                <pubDate>Sun, 19 Mar 2017 00:00:00 -0400</pubDate>
+        </item>
+
+
+</channel>
+</rss>

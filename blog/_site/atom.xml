@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>gusg21</title>
+ <link href="http://gusg21.github.io/atom.xml" rel="self"/>
+ <link href="http://gusg21.github.io"/>
+ <updated>2017-03-19T16:17:10-04:00</updated>
+ <id>http://gusg21.github.io</id>
+ <author>
+   <name>Gus G</name>
+   <email>gusg21@parkschool.net</email>
+ </author>
+
+ 
+ <entry>
+   <title>Number Parser</title>
+   <link href="http://gusg21.github.io/post/2017/03/19/number-parser"/>
+   <updated>2017-03-19T00:00:00-04:00</updated>
+   <id>http://gusg21.github.io/post/2017/03/19/number-parser</id>
+   <content type="html">
+&lt;p&gt;I was thinking. I’ve heard of and have used lightly date parsers. For those who do not know, they change dates of many formats in strings into objects. They’re fun to push to the boundaries. But is there such a thing as a number parser? So I could convert this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;    &quot;four hundred and twenty two&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Into this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;    422
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That could be useful. Hmmm… Normal people would look into this and probably find it’s been done, but not me. I’m gonna go write one. And it’s gonna crash. Crash and burn.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Welcome to my Blog</title>
+   <link href="http://gusg21.github.io/2017/03/19/hello-world"/>
+   <updated>2017-03-19T00:00:00-04:00</updated>
+   <id>http://gusg21.github.io/2017/03/19/hello-world</id>
+   <content type="html">
+&lt;p&gt;I will probably (maybe) (probably not) use this to write down stuff I learn over the course of coding that I don’t want to forget but know I probably will. I hope you … like it? I guess? I honestly don’t care.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>
