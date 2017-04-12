@@ -1,11 +1,29 @@
-$(function() { /* stuff */ });
+$.fn.moveIt = function(){
+  var $window = $(window);
+  var instances = [];
 
-$(".exit").click(function() {
-  alert("Please do not do that.");
-});
+  $(this).each(function(){
+    instances.push(new moveItItem($(this)));
+  });
 
-cheet('↑ ↑ ↓ ↓ ← → ← → b a', function () {
-  $("body").css("background-image","url('http://i1.kym-cdn.com/entries/icons/original/000/000/091/cancer.png')"); // Onclick of button the background image of body will be test here. Give the image path in url
-  $(".fake-window").addClass("rotating");
-  $("h1").html("WHEEEEEEEE");
+  window.onscroll = function(){
+    var scrollTop = $window.scrollTop();
+    instances.forEach(function(inst){
+      inst.update(scrollTop);
+    });
+  }
+}
+
+var moveItItem = function(el){
+  this.el = $(el);
+  this.speed = parseFloat(this.el.attr('data-scroll-speed'));
+};
+
+moveItItem.prototype.update = function(scrollTop){
+  this.el.css('transform', 'translateY(' + -(scrollTop / this.speed) + 'px)');
+};
+
+// Initialization
+$(function(){
+  $('[data-scroll-speed]').moveIt();
 });
