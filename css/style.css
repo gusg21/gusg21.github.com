@@ -1,135 +1,34 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-  font-family: "Segoe UI", "Open Sans", sans-serif;
-}
-
+@import url('https://fonts.googleapis.com/css?family=Concert+One|Lato');
 html {
-  height: 100%;
+    background-color: #ffffff;
+    padding: 30px;
 }
 
 body {
-  height: 100%;
-  background: #67B26F;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #4ca2cd, #67B26F);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #4ca2cd, #67B26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: white;
-  text-align: center;
-  background-attachment: fixed;
-  font-size: 1.5em;
-}
-
-p, h1, h2, h3 {
-  margin: 10vw;
-}
-
-ul {
-  margin-top: 5px;
-}
-
-a {
-  color: #ffffff;
-  transition: all ease 0.4s;
-  text-decoration: none;
-  font-style: italic;
-}
-
-a:hover {
-  font-size: 90%;
+    font-family: 'Concert One', cursive;
+    text-align: center;
+    background-color: rgb(241, 241, 241);
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px;
 }
 
 h1 {
-  font-size: 2.4em;
+    margin: 20px;
+    font-size: 7vw;
 }
 
-h2 {
-  font-size: 2em;
+.hr {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgb(219, 117, 0);
 }
 
-h3 {
-  font-size: 1.6em;
+p {
+    font-size: 2vw;
+    font-family: 'Lato', sans-serif;
 }
 
-hr {
-  border: 0;
-  height: 0;
-  border-top: thin solid white;
-  width: 80vw;
-  margin: auto;
-  text-align: center;
-  margin-top: 30px;
-}
-
-hr::after {
-  content: "\00d7\00d7\00d7";
-  display: inline-block;
-  position: relative;
-  top: -0.8em;
-  font-size: 1.5em;
-}
-
-.title-container {
-  height: 100vh;
-}
-
-.title {
-  font-size: 12vh;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  position: absolute;
-  animation: 1s ease-out 0s 1 dropShadow;
-  animation-fill-mode: forwards;
-  font-weight: bold;
-}
-
-.title > .links {
-  font-weight: normal;
-  font-size: 6vh;
-}
-
-.title > .links > ul > li {
-  display: inline-block;
-}
-
-.title > .links > ul > li:not(:last-child)::after {
-  content: " \00d7 ";
-}
-
-@keyframes dropShadow {
-  0% {
-    text-shadow: none;
-  }
-  100% {
-    text-shadow: 0px 9vh 2px rgba(0, 0, 0, 0.25);
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .title > .links > ul > li {
-    display: list-item;
-    list-style-type: none;
-  }
-
-  .title > .links > ul > li:not(:last-child)::after {
-    content: "";
-  }
-
-  @keyframes dropShadow {
-    0% {
-      text-shadow: none;
-    }
-    100% {
-      text-shadow: 0px 3vh 2px rgba(0, 0, 0, 0.25);
-    }
-  }
+a {
+    color: rgb(219, 117, 0);
 }
