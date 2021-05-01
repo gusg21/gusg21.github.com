@@ -189,6 +189,11 @@ p {
   text-align: center;
   margin:auto;
 }
+
+.mail {
+  text-align: left;  position: absolute;
+  padding-left: 2px;
+}
 /*
 #Wgames,#Wtoys,#Wexps,#Wlinks
 {
